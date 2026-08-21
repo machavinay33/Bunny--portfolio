@@ -42,6 +42,8 @@
 - [x] Add Netlify build configuration with the correct Vite output directory.
 - [x] Add SPA fallback routing for the portfolio homepage and `/admin` route.
 - [x] Verify the Netlify deployment artifacts and push the fix to GitHub.
-- [ ] Make the supplied live website URLs the primary rendered previews in Selected Work cards instead of timing out to abstract images.
-- [ ] Preserve a useful fallback only when a live website truly cannot be embedded.
-- [ ] Verify live previews at desktop and mobile sizes and push the corrected source.
+- [x] Make the supplied live website URLs the primary rendered previews in Selected Work cards instead of timing out to abstract images.
+- [x] Preserve a useful fallback only when a live website truly cannot be embedded.
+- [x] Verify live previews at desktop and mobile sizes and push the corrected source.
+- [ ] Add a loading state and resilient blocked-embed fallback for live project iframes.
+- [ ] Run a mobile-breakpoint visual verification after the live-preview correction.
