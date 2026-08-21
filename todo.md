@@ -50,6 +50,9 @@
 - [x] Remove the fifth “More websites” project card and its filter.
 - [x] Fix Bunny navbar animation replay so it visibly completes, waits 8 seconds, and then replays.
 - [x] Verify the corrected navbar animation and project list on desktop and mobile, then push the update.
-- [ ] Run a desktop visual verification for the updated four-project Work section and Bunny navbar animation.
-- [ ] Add focused timing constants or test coverage for the 8-second Bunny replay interval.
-- [ ] Synchronize the latest Home.tsx and BunnySignature.tsx changes into GitHub, commit, and push them.
+- [x] Run a desktop visual verification for the updated four-project Work section and Bunny navbar animation.
+- [x] Add focused timing constants or test coverage for the 8-second Bunny replay interval.
+- [x] Synchronize the latest Home.tsx and BunnySignature.tsx changes into GitHub, commit, and push them.
+- [ ] Change the Bunny animation replay gap from 8 seconds to 4 seconds.
+- [ ] Increase the Bunny logo and wordmark size and make the BUNNY wordmark thicker and bolder.
+- [ ] Verify the updated logo on desktop and mobile, then push the change to GitHub.
