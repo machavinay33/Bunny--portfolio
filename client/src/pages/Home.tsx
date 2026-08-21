@@ -1,8 +1,9 @@
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { ArrowUpRight, Code2, Database, Layers3, Menu, MessageCircle, MoveRight, Palette, Send, Sparkles, X, Zap } from "lucide-react";
+import { ArrowUpRight, Code2, Database, Layers3, Menu, Moon, MoveRight, Palette, Send, Sun, X, Zap } from "lucide-react";
 import { toast } from "sonner";
 import BunnySignature from "@/components/BunnySignature";
+import { useTheme } from "@/contexts/ThemeContext";
 import { trpc } from "@/lib/trpc";
 
 const projects = [
@@ -25,6 +26,7 @@ function ScrollSection({ id, children, className = "" }: { id: string; children:
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
   const [active, setActive] = useState("home");
   const [filter, setFilter] = useState("ALL");
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -43,7 +45,7 @@ export default function Home() {
 
   return <div className="site-shell">
     <motion.div className="scroll-progress" style={{ scaleX: progress }} />
-    <header className="site-nav"><div className="nav-inner"><button className="brand-lockup" onClick={() => navTo("home")} aria-label="Go home"><span className="nav-signature"><BunnySignature /></span></button><nav className="desktop-links">{["about", "skills", "work", "services", "contact"].map((id, i) => <button className={active === id ? "active" : ""} key={id} onClick={() => navTo(id)}><span>0{i + 1}</span>{id.toUpperCase()}</button>)}</nav><button className="menu-toggle" onClick={() => setMenuOpen(v => !v)} aria-label="Toggle navigation">{menuOpen ? <X /> : <Menu />}</button></div>{menuOpen && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mobile-menu">{["home", "about", "skills", "work", "services", "contact"].map((id, i) => <button key={id} onClick={() => navTo(id)}><span>0{i + 1}</span>{id.toUpperCase()}<ArrowUpRight /></button>)}</motion.div>}</header>
+    <header className="site-nav"><div className="nav-inner"><button className="brand-lockup" onClick={() => navTo("home")} aria-label="Go home"><span className="nav-signature"><BunnySignature /></span></button><nav className="desktop-links">{["about", "skills", "work", "services", "contact"].map((id, i) => <button className={active === id ? "active" : ""} key={id} onClick={() => navTo(id)}><span>0{i + 1}</span>{id.toUpperCase()}</button>)}</nav><div className="nav-actions"><button className="theme-toggle" onClick={() => toggleTheme?.()} aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`} aria-pressed={theme === "light"}><span className="theme-toggle-track"><span className="theme-toggle-thumb">{theme === "dark" ? <Moon /> : <Sun />}</span></span><span className="theme-toggle-label">{theme === "dark" ? "DARK" : "LIGHT"}</span></button><button className="menu-toggle" onClick={() => setMenuOpen(v => !v)} aria-label="Toggle navigation">{menuOpen ? <X /> : <Menu />}</button></div></div>{menuOpen && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mobile-menu">{["home", "about", "skills", "work", "services", "contact"].map((id, i) => <button key={id} onClick={() => navTo(id)}><span>0{i + 1}</span>{id.toUpperCase()}<ArrowUpRight /></button>)}</motion.div>}</header>
 
     <ScrollSection id="home" className="hero"><div className="hero-grid" /><div className="hero-copy"><motion.div initial="hidden" animate="visible" variants={reveal} className="eyebrow"><span className="status-dot" /> AVAILABLE FOR SELECT PROJECTS <span className="eyebrow-line" /></motion.div><motion.h1 initial="hidden" animate="visible" transition={{ delay: .1 }} variants={reveal}>FULL-STACK<br /><em>DEVELOPER</em><br /><span>& DIGITAL BUILDER.</span></motion.h1><motion.p initial="hidden" animate="visible" transition={{ delay: .2 }} variants={reveal}>I build modern websites and digital experiences that help businesses look better, work smarter, and grow online.</motion.p><motion.div initial="hidden" animate="visible" transition={{ delay: .3 }} variants={reveal} className="hero-actions"><button className="button button-primary" onClick={() => navTo("work")}>VIEW MY WORK <ArrowUpRight /></button><button className="button button-ghost" onClick={() => navTo("contact")}>LET'S WORK TOGETHER <MoveRight /></button></motion.div><motion.div initial="hidden" animate="visible" transition={{ delay: .4 }} variants={reveal} className="hero-micro"><span>AI-ASSISTED DEVELOPMENT</span><span>FULL-STACK ENGINEERING</span><span>FREELANCE WEB DEVELOPMENT</span></motion.div></div><div className="hero-art"><div className="orb orb-one" /><div className="orb orb-two" /><div className="logo-halo"><img src="/manus-storage/bunny-logo_ddf1c33c.png" alt="Bunny geometric rabbit logo" /></div><div className="orbit orbit-a" /><div className="orbit orbit-b" /><div className="art-caption"><span>01 / 04</span><span>CRAFTED IN THE OPEN</span></div></div><div className="hero-bottom"><span>SCROLL TO EXPLORE</span><span className="scroll-line" /><span>© 2026</span></div></ScrollSection>
 

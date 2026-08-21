@@ -13,3 +13,6 @@
 - [x] Add Vitest coverage for contact validation/persistence and core portfolio behavior.
 - [x] Run typecheck, tests, production build, and visual verification.
 - [x] Package the complete deployable source into a downloadable ZIP.
+- [x] Add an accessible light/dark mode toggle switch to the navigation bar with persisted preference.
+- [x] Add and verify complementary light-theme tokens and component states.
+- [x] Test the theme toggle with typecheck, Vitest, and visual verification.
