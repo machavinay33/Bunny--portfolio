@@ -45,5 +45,5 @@
 - [x] Make the supplied live website URLs the primary rendered previews in Selected Work cards instead of timing out to abstract images.
 - [x] Preserve a useful fallback only when a live website truly cannot be embedded.
 - [x] Verify live previews at desktop and mobile sizes and push the corrected source.
-- [ ] Add a loading state and resilient blocked-embed fallback for live project iframes.
-- [ ] Run a mobile-breakpoint visual verification after the live-preview correction.
+- [x] Add a loading state and resilient blocked-embed fallback for live project iframes.
+- [x] Run a mobile-breakpoint visual verification after the live-preview correction.
