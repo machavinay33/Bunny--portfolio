@@ -29,3 +29,13 @@
 - [x] Copy the complete Bunny portfolio source, logo, animation reference, and required assets into the repository.
 - [x] Verify the imported project with typecheck, tests, and production build.
 - [x] Commit and push the complete source to the user’s GitHub repository.
+- [x] Add Supabase project URL and anon key configuration for the public app.
+- [x] Define Supabase schema and row-level security guidance for site settings, projects, skills, services, and contact messages.
+- [x] Build protected admin login and dashboard routes.
+- [x] Add CRUD editing for projects, contact details, skills, services, and site content.
+- [x] Add an admin messages view for portfolio enquiries and booking requests.
+- [x] Connect the public site and contact form to Supabase.
+- [x] Add tests, documentation, and deployment instructions for the Supabase CMS.
+- [x] Synchronize the latest Supabase admin dashboard and CMS files into the GitHub checkout.
+- [x] Commit and push the synchronized files to the user’s repository.
+- [x] Verify the remote commit and key admin/CMS files on GitHub.
