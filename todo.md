@@ -47,3 +47,9 @@
 - [x] Verify live previews at desktop and mobile sizes and push the corrected source.
 - [x] Add a loading state and resilient blocked-embed fallback for live project iframes.
 - [x] Run a mobile-breakpoint visual verification after the live-preview correction.
+- [x] Remove the fifth “More websites” project card and its filter.
+- [x] Fix Bunny navbar animation replay so it visibly completes, waits 8 seconds, and then replays.
+- [x] Verify the corrected navbar animation and project list on desktop and mobile, then push the update.
+- [ ] Run a desktop visual verification for the updated four-project Work section and Bunny navbar animation.
+- [ ] Add focused timing constants or test coverage for the 8-second Bunny replay interval.
+- [ ] Synchronize the latest Home.tsx and BunnySignature.tsx changes into GitHub, commit, and push them.

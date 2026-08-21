@@ -12,9 +12,8 @@ const projects = [
   { title: "Siyara Designer Studio", type: "RETAIL + MANUFACTURING", tags: ["Brand site", "Catalog", "Enquiry"], tone: "violet", image: "/assets/signal-operations.jpg", description: "A warm digital storefront and manufacturing presence for a Hyderabad fashion studio.", live: "https://siyara-designer-studio.netlify.app/" },
   { title: "Venky's", type: "FOOD + E-COMMERCE", tags: ["Storytelling", "Organic", "Store"], tone: "green", image: "/assets/morrow-studio.jpg", description: "An organic spice brand experience rooted in tradition and built for modern kitchens.", live: "https://venkeys-store.netlify.app/" },
   { title: "Dune Bar & Kitchen", type: "HOSPITALITY", tags: ["Restaurant", "Reservations", "Events"], tone: "sand", image: "/assets/northstar-commerce.jpg", description: "An immersive rooftop restaurant site with menu, events, gallery, and table reservations.", live: "https://dune-bar-restaurant.netlify.app" },
-  { title: "More websites, more in progress", type: "MORE BUILDS", tags: ["Websites", "Digital products"], tone: "more", image: "/assets/signal-operations.jpg", description: "And more websites we created across product, retail, hospitality, and digital experiences.", live: "#contact" },
 ];
-const filters = ["ALL", "E-COMMERCE", "RETAIL + MANUFACTURING", "FOOD + E-COMMERCE", "HOSPITALITY", "MORE BUILDS"];
+const filters = ["ALL", "E-COMMERCE", "RETAIL + MANUFACTURING", "FOOD + E-COMMERCE", "HOSPITALITY"];
 const services = [
   { icon: <Code2 />, title: "FULL-STACK BUILDS", copy: "From first route to production-ready backend, I build the parts that make a product work." },
   { icon: <Palette />, title: "DIGITAL DIRECTION", copy: "A sharp visual system, clear interaction language, and a product people remember." },
