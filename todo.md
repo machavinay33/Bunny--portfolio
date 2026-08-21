@@ -21,3 +21,7 @@
 - [x] Add a final project entry stating that additional websites were created.
 - [x] Verify all supplied live links and the refreshed responsive UI.
 - [x] Package the updated full source code into a new ZIP archive.
+- [x] Fix the Bunny navbar animation visibility and timing for first-time visitors.
+- [x] Preserve the completed Bunny mark for returning visitors and verify the navbar at desktop and mobile sizes.
+- [x] Re-run validation and package the corrected source ZIP.
+- [x] Enlarge the navbar height and Bunny logo animation lockup for clearer visibility.

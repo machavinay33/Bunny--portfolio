@@ -16,13 +16,13 @@ export default function BunnySignature() {
   }), []);
 
   useEffect(() => {
-    const visited = window.localStorage.getItem("bunny-signature-seen") === "1";
+    const visited = window.localStorage.getItem("bunny-signature-seen-v3") === "1";
     setHasVisited(visited);
     if (visited) { setPhase("complete"); return; }
     const timers = [
       window.setTimeout(() => setPhase("arrived"), 1550),
       window.setTimeout(() => setPhase("dissolve"), 1750),
-      window.setTimeout(() => { setPhase("complete"); window.localStorage.setItem("bunny-signature-seen", "1"); }, 3250),
+      window.setTimeout(() => { setPhase("complete"); window.localStorage.setItem("bunny-signature-seen-v3", "1"); }, 3250),
     ];
     return () => timers.forEach(window.clearTimeout);
   }, []);
