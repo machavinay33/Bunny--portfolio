@@ -39,3 +39,9 @@
 - [x] Synchronize the latest Supabase admin dashboard and CMS files into the GitHub checkout.
 - [x] Commit and push the synchronized files to the user’s repository.
 - [x] Verify the remote commit and key admin/CMS files on GitHub.
+- [x] Add Netlify build configuration with the correct Vite output directory.
+- [x] Add SPA fallback routing for the portfolio homepage and `/admin` route.
+- [x] Verify the Netlify deployment artifacts and push the fix to GitHub.
+- [ ] Make the supplied live website URLs the primary rendered previews in Selected Work cards instead of timing out to abstract images.
+- [ ] Preserve a useful fallback only when a live website truly cannot be embedded.
+- [ ] Verify live previews at desktop and mobile sizes and push the corrected source.
