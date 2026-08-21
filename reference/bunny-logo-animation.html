@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bunny — Logo Signature Animation</title>
+<style>
+  :root{
+    --ink:#ffffff;
+    --glow: 0 0 18px rgba(255,255,255,.55);
+    --ease-premium: cubic-bezier(.22,.9,.24,1);
+  }
+  html,body{
+    margin:0; padding:0; height:100%;
+    background: radial-gradient(1200px 600px at 50% 40%, #14161a 0%, #0a0b0d 60%, #060708 100%);
+    /* ^ demo backdrop only — the exported component itself has NO background */
+    display:flex; align-items:center; justify-content:center;
+    font-family: -apple-system, "Inter", "Helvetica Neue", Arial, sans-serif;
+    overflow:hidden;
+  }
+
+  /* ============ STAGE (this + everything inside is what you drop in the navbar) ============ */
+  .navbar-stage{
+    position:relative;
+    width: 460px;
+    height: 96px;
+    background: transparent; /* TRUE transparency — no fill of any kind */
+  }
+
+  .track{
+    position:absolute; inset:0;
+    overflow: visible;
+  }
+
+  /* -------- Running rabbit rig -------- */
+  .rabbit-rig{
+    position:absolute;
+    top: 50%;
+    left: 100%;
+    width: 74px; height: 74px;
+    transform: translate(0, -50%);
+    transform-origin: 30px 60px;
+    animation:
+      run-across 1.55s var(--ease-premium) 0.45s forwards,
+      run-bounce 0.24s ease-in-out 0.45s 6;
+    opacity: 1;
+  }
+  .rabbit-rig svg{ width:100%; height:100%; overflow:visible; display:block; }
+  .rabbit-rig .blur{ filter: blur(.4px); }
+
+  .leg{
+    transform-origin: 700px 900px;
+    stroke: var(--ink);
+    stroke-width: 46;
+    stroke-linecap: round;
+    animation: leg-swing 0.24s ease-in-out 0.45s 6;
+  }
+  .leg.back{ animation-delay: 0.57s; }
+  .ear{
+    transform-origin: 690px 560px;
+    animation: ear-flop 0.24s ease-in-out 0.45s 6;
+  }
+
+  @keyframes run-across{
+    0%   { left: 112%; }
+    82%  { left: 6%;   }
+    100% { left: 2%;   }
+  }
+  @keyframes run-bounce{
+    0%,100%{ transform: translate(0,-50%) translateY(0); }
+    50%    { transform: translate(0,-50%) translateY(-5px); }
+  }
+  @keyframes leg-swing{
+    0%,100%{ transform: rotate(18deg); }
+    50%    { transform: rotate(-18deg); }
+  }
+  @keyframes ear-flop{
+    0%,100%{ transform: rotate(-4deg); }
+    50%    { transform: rotate(5deg); }
+  }
+
+  .rabbit-rig{
+    animation-fill-mode: forwards;
+  }
+  /* freeze the run at ~2.0s, then fade out as particles take over */
+  .rabbit-rig.arrived{
+    animation: none;
+    left: 2%;
+    transform: translate(0,-50%);
+  }
+  .rabbit-rig.dissolving{
+    animation: rabbit-dissolve 0.5s var(--ease-premium) forwards;
+  }
+  @keyframes rabbit-dissolve{
+    0%   { opacity: 1; filter: blur(0px); }
+    100% { opacity: 0; filter: blur(2px); }
+  }
+
+  /* -------- Particle burst (the "matter → vector" transformation) -------- */
+  .particles{
+    position:absolute; left: 48px; top: 50%; width:0; height:0;
+  }
+  .particle{
+    position:absolute;
+    width: var(--s); height: var(--s);
+    background: var(--ink);
+    border-radius: 1px;
+    opacity: 0;
+    left: var(--x0); top: var(--y0);
+    box-shadow: var(--glow);
+    animation: particle-life 0.95s var(--ease-premium) forwards;
+    animation-delay: var(--d);
+  }
+  @keyframes particle-life{
+    0%   { opacity: 0; transform: translate(0,0) scale(1); }
+    18%  { opacity: 1; }
+    70%  { opacity: .9; transform: translate(var(--xt), var(--yt)) scale(.5); }
+    100% { opacity: 0;  transform: translate(var(--xt), var(--yt)) scale(.2); }
+  }
+
+  /* -------- Final mark: circle + geometric silhouette -------- */
+  .mark{
+    position:absolute; left: 48px; top: 50%;
+    width: 74px; height: 74px;
+    transform: translate(0,-50%) scale(.82);
+    opacity: 0;
+  }
+  .mark.reveal{
+    animation: mark-settle 0.55s var(--ease-premium) forwards;
+    animation-delay: 1.65s;
+  }
+  @keyframes mark-settle{
+    0%   { opacity: 0; transform: translate(0,-50%) scale(.7); }
+    60%  { opacity: 1; transform: translate(0,-50%) scale(1.04); }
+    100% { opacity: 1; transform: translate(0,-50%) scale(1); }
+  }
+
+  .ring{
+    fill:none; stroke: var(--ink); stroke-width: 27;
+    stroke-dasharray: 3170; stroke-dashoffset: 3170;
+  }
+  .mark.reveal .ring{
+    animation: draw-ring 0.55s var(--ease-premium) forwards;
+    animation-delay: 1.95s;
+  }
+  @keyframes draw-ring{
+    to{ stroke-dashoffset: 0; }
+  }
+
+  .silhouette{ fill: var(--ink); opacity:0; }
+  .mark.reveal .silhouette{
+    animation: fade-in .4s var(--ease-premium) forwards;
+    animation-delay: 1.7s;
+  }
+  @keyframes fade-in{ to{ opacity:1; } }
+
+  /* -------- Wordmark -------- */
+  .wordmark{
+    position:absolute; left: 142px; top: 18px;
+    display:flex; gap: 4px;
+  }
+  .wordmark span{
+    font-size: 27px; font-weight: 600; letter-spacing: 4px;
+    color: var(--ink); opacity:0; display:inline-block;
+    transform: translateY(10px) translateX(-4px);
+    animation: letter-in .38s var(--ease-premium) forwards;
+  }
+  .wordmark span:nth-child(1){ animation-delay: 2.55s; }
+  .wordmark span:nth-child(2){ animation-delay: 2.65s; }
+  .wordmark span:nth-child(3){ animation-delay: 2.75s; }
+  .wordmark span:nth-child(4){ animation-delay: 2.85s; }
+  .wordmark span:nth-child(5){ animation-delay: 2.95s; }
+  @keyframes letter-in{
+    to{ opacity:1; transform: translateY(0) translateX(0); }
+  }
+
+  .tagline{
+    position:absolute; left: 143px; top: 58px;
+    font-size: 10.5px; letter-spacing: 2.6px; font-weight: 500;
+    color: var(--ink); opacity: 0;
+    transform: translateY(6px);
+    animation: tagline-in .4s var(--ease-premium) forwards;
+    animation-delay: 3.25s;
+  }
+  @keyframes tagline-in{
+    to{ opacity:.72; transform: translateY(0); }
+  }
+
+  /* ============ demo chrome (not part of the exported asset) ============ */
+  .demo-caption{
+    position:fixed; bottom: 26px; left:0; right:0;
+    text-align:center; color:#666; font-size:12px; letter-spacing:.5px;
+  }
+  .replay{
+    position:fixed; top:26px; right:28px;
+    background:#fff; color:#111; border:none; border-radius:20px;
+    padding:8px 16px; font-size:13px; cursor:pointer; font-weight:600;
+  }
+</style>
+</head>
+<body>
+
+  <button class="replay" onclick="location.reload()">Replay</button>
+
+  <div class="navbar-stage" id="stage">
+    <div class="track">
+
+      <!-- running rig — built from the EXACT traced silhouette of the reference logo -->
+      <div class="rabbit-rig" id="rig">
+        <svg viewBox="0 0 1254 1254">
+          <line class="leg" x1="700" y1="900" x2="655" y2="1040"></line>
+          <line class="leg back" x1="760" y1="905" x2="815" y2="1040"></line>
+          <g class="ear">
+            <path class="blur" fill="var(--ink)" d="M732,309 L723,302 L676,345 L672,323 L666,311 L655,300 L338,616 L323,620 L317,626 L314,634 L318,641 L333,656 L365,675 L392,684 L425,689 L458,688 L486,682 L528,664 L562,639 L535,610 L718,434 L738,410 L749,380 L750,353 L742,325 Z"/>
+          </g>
+          <path class="blur" fill="var(--ink)" d="M565,642 L565,908 L911,907 L911,823 L886,825 L855,837 L835,855 L828,865 L819,820 L796,765 L770,727 L737,694 L704,671 L656,651 L614,643 Z"/>
+          <path class="blur" fill="var(--ink)" d="M529,816 L528,815 L524,815 L523,816 L516,816 L515,817 L510,817 L509,818 L506,818 L505,819 L503,819 L502,820 L494,822 L487,826 L485,826 L483,828 L480,829 L478,831 L468,837 L449,856 L449,857 L446,860 L445,863 L439,871 L435,879 L435,881 L434,882 L434,884 L432,888 L432,891 L431,892 L431,896 L430,897 L430,908 L529,908 Z"/>
+        </svg>
+      </div>
+
+      <!-- particle burst container (populated by JS) -->
+      <div class="particles" id="particles"></div>
+
+      <!-- final geometric mark — pixel-traced directly from your reference file, not hand-approximated -->
+      <div class="mark" id="mark">
+        <svg viewBox="0 0 1254 1254">
+          <circle class="ring" cx="624" cy="619" r="504.5"></circle>
+          <path class="silhouette" d="M732,309 L723,302 L676,345 L672,323 L666,311 L655,300 L338,616 L323,620 L317,626 L314,634 L318,641 L333,656 L365,675 L392,684 L425,689 L458,688 L486,682 L528,664 L562,639 L535,610 L718,434 L738,410 L749,380 L750,353 L742,325 Z
+                   M565,642 L565,908 L911,907 L911,823 L886,825 L855,837 L835,855 L828,865 L819,820 L796,765 L770,727 L737,694 L704,671 L656,651 L614,643 Z
+                   M529,816 L528,815 L524,815 L523,816 L516,816 L515,817 L510,817 L509,818 L506,818 L505,819 L503,819 L502,820 L494,822 L487,826 L485,826 L483,828 L480,829 L478,831 L468,837 L449,856 L449,857 L446,860 L445,863 L439,871 L435,879 L435,881 L434,882 L434,884 L432,888 L432,891 L431,892 L431,896 L430,897 L430,908 L529,908 Z"></path>
+        </svg>
+      </div>
+
+      <!-- wordmark + tagline -->
+      <div class="wordmark">
+        <span>B</span><span>U</span><span>N</span><span>N</span><span>Y</span>
+      </div>
+      <div class="tagline">BUILD&nbsp;•&nbsp;CREATE&nbsp;•&nbsp;INSPIRE</div>
+
+    </div>
+  </div>
+
+  <div class="demo-caption">Preview backdrop is dark only for visibility — the stage element itself is fully transparent.</div>
+
+<script>
+  // Build the particle burst: sampled roughly along the running rabbit's silhouette,
+  // converging toward the final logo's center as the rabbit dissolves.
+  const NUM = 46;
+  const box = document.getElementById('particles');
+  const rig = document.getElementById('rig');
+  const mark = document.getElementById('mark');
+
+  for(let i=0;i<NUM;i++){
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const ang = Math.random()*Math.PI*2;
+    const r0 = 6 + Math.random()*26;
+    const x0 = Math.cos(ang)*r0*1.1 - 10;
+    const y0 = Math.sin(ang)*r0*1.4 - 30;
+    const xt = (Math.random()-0.5)*10;
+    const yt = (Math.random()-0.5)*10;
+    p.style.setProperty('--x0', x0+'px');
+    p.style.setProperty('--y0', y0+'px');
+    p.style.setProperty('--xt', xt+'px');
+    p.style.setProperty('--yt', yt+'px');
+    p.style.setProperty('--s', (1.5+Math.random()*2.2)+'px');
+    p.style.setProperty('--d', (1.55 + Math.random()*0.15)+'s');
+    box.appendChild(p);
+  }
+
+  // choreography timing (seconds), matched to the CSS delays above
+  setTimeout(()=> rig.classList.add('arrived'), 1550);
+  setTimeout(()=> rig.classList.add('dissolving'), 1750);
+  setTimeout(()=> mark.classList.add('reveal'), 0);
+</script>
+
+</body>
+</html>

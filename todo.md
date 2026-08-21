@@ -25,3 +25,7 @@
 - [x] Preserve the completed Bunny mark for returning visitors and verify the navbar at desktop and mobile sizes.
 - [x] Re-run validation and package the corrected source ZIP.
 - [x] Enlarge the navbar height and Bunny logo animation lockup for clearer visibility.
+- [x] Clone the user’s empty GitHub repository and confirm its initial state.
+- [x] Copy the complete Bunny portfolio source, logo, animation reference, and required assets into the repository.
+- [x] Verify the imported project with typecheck, tests, and production build.
+- [x] Commit and push the complete source to the user’s GitHub repository.

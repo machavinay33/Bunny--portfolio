@@ -1,0 +1,2066 @@
+MASTER PROMPT — BUNNY PREMIUM FULL-STACK PORTFOLIO + ADMIN CMS
+
+You are an elite senior full-stack engineer, UI/UX designer, creative developer, 3D web designer, motion designer, and Supabase architect.
+
+I want you to build a complete, production-ready personal portfolio website for me.
+
+This must NOT be a generic developer portfolio.
+
+I want a premium, highly interactive, modern, futuristic personal-brand website with:
+
+- Premium UI/UX
+- Premium dark theme
+- 3D elements
+- Smooth scrolling
+- Cinematic animations
+- Interactive project previews
+- Responsive design
+- Mobile optimization
+- Supabase backend
+- Secure admin authentication
+- Complete admin dashboard/CMS
+- Editable portfolio content
+- Contact/message management
+- Netlify deployment support
+
+The final project must be deployable to NETLIFY with SUPABASE as the backend.
+
+============================================================
+1. MY PERSONAL BRAND
+============================================================
+
+Brand / Name:
+
+BUNNY
+
+Profession:
+
+FULL-STACK WEB DEVELOPER
+
+Also:
+
+FREELANCER / DIGITAL BUILDER
+
+Tagline:
+
+BUILD • CREATE • INSPIRE
+
+My positioning:
+
+I help businesses create modern websites, e-commerce experiences, dashboards, web applications, and digital products.
+
+I use AI heavily as part of my development workflow, combined with coding, design, problem solving, customization, testing, debugging, and deployment.
+
+IMPORTANT:
+
+Do NOT present me as someone who simply generates websites using AI.
+
+Position me as:
+
+AI-ASSISTED FULL-STACK DEVELOPER
+
+AI is my development accelerator, but I am responsible for the architecture, design decisions, coding, customization, debugging, testing and final product.
+
+============================================================
+2. BRAND LOGO
+============================================================
+
+I will provide my Bunny logo image.
+
+Use the provided Bunny logo as the primary visual identity.
+
+The logo is a minimalist geometric rabbit inside a circular shape.
+
+Do NOT redesign the logo.
+
+Preserve:
+
+- rabbit silhouette
+- circular shape
+- proportions
+- geometry
+- recognizable identity
+
+Use the logo throughout:
+
+- Navbar
+- Loading/intro animation
+- Hero
+- Admin dashboard
+- Footer
+- Mobile navigation
+- Favicon
+- 3D visual
+
+============================================================
+3. SIGNATURE BUNNY NAVBAR ANIMATION
+============================================================
+
+This is the signature experience of my website.
+
+When a visitor opens the website for the FIRST TIME:
+
+The navbar initially has no visible logo.
+
+A realistic white rabbit enters from the FAR RIGHT side.
+
+The rabbit runs naturally:
+
+RIGHT → LEFT
+
+toward the position where the Bunny logo belongs.
+
+The rabbit should look like a realistic rabbit, not a cartoon.
+
+When it reaches the logo position:
+
+- Slow down
+- Stop
+- Pause briefly
+
+Then transform the REAL RABBIT into my geometric Bunny logo.
+
+The transformation should feel like:
+
+REAL RABBIT
+↓
+PARTICLES
+↓
+GEOMETRIC RABBIT
+↓
+CIRCULAR BUNNY LOGO
+
+IMPORTANT:
+
+Do NOT simply fade the rabbit out and fade the logo in.
+
+The viewer must clearly feel that the real rabbit is becoming the logo.
+
+After the logo completely forms:
+
+Reveal the word:
+
+B U N N Y
+
+Then reveal:
+
+BUILD • CREATE • INSPIRE
+
+Final navbar:
+
+[ BUNNY LOGO ]   B U N N Y
+                  BUILD • CREATE • INSPIRE
+
+The animation should feel:
+
+- Premium
+- Cinematic
+- Smooth
+- Modern
+- Slightly playful
+- Professional
+
+Do NOT make it childish.
+
+Do NOT use excessive effects.
+
+The full animation should play only on the first visit.
+
+For returning visitors, immediately show the completed logo or use a very subtle micro-animation.
+
+============================================================
+4. OVERALL VISUAL DESIGN
+============================================================
+
+Create a premium dark-first creative technology portfolio.
+
+Design language:
+
+- Luxury
+- Futuristic
+- Minimal
+- Creative
+- Technical
+- Sophisticated
+- Slightly playful
+- High-end agency quality
+
+Use:
+
+- Deep black / charcoal background
+- White typography
+- White Bunny logo
+- Subtle gray surfaces
+- One carefully selected accent color
+- Soft gradients
+- Subtle glass effects
+- Large typography
+- Generous whitespace
+- Premium cards
+- Smooth transitions
+- Cinematic scroll animations
+
+Do NOT overuse:
+
+- Neon
+- Glassmorphism
+- Glow
+- Gradients
+- Particles
+- 3D objects
+
+Every visual effect must have a purpose.
+
+The website should look expensive, not overloaded.
+
+============================================================
+5. TYPOGRAPHY
+============================================================
+
+Use a premium modern sans-serif font.
+
+Possible choices:
+
+- Inter
+- Manrope
+- Satoshi
+- Space Grotesk
+- Plus Jakarta Sans
+
+Choose the best combination.
+
+Use large expressive typography.
+
+Hero example:
+
+BUILDING
+DIGITAL
+EXPERIENCES.
+
+or:
+
+I BUILD
+WEBSITES
+THAT MOVE.
+
+Typography should be one of the major visual elements of the website.
+
+============================================================
+6. TECH STACK
+============================================================
+
+Use a modern production-ready architecture.
+
+Preferred:
+
+Frontend:
+
+React
+TypeScript
+Vite
+
+Styling:
+
+Tailwind CSS
+
+Animation:
+
+GSAP
+Framer Motion
+Lenis
+
+3D:
+
+Three.js / React Three Fiber
+
+Backend:
+
+Supabase
+
+Database:
+
+PostgreSQL via Supabase
+
+Authentication:
+
+Supabase Auth
+
+Storage:
+
+Supabase Storage
+
+Deployment:
+
+Netlify
+
+Use only necessary dependencies.
+
+Do not make the project unnecessarily complicated.
+
+============================================================
+7. NAVBAR
+============================================================
+
+Create a premium sticky navbar.
+
+Desktop:
+
+LEFT:
+
+Bunny circular logo
+B U N N Y
+
+RIGHT:
+
+HOME
+ABOUT
+SKILLS
+SERVICES
+WORK
+CONTACT
+
+CTA:
+
+LET'S WORK TOGETHER
+
+Navbar behavior:
+
+- Sticky
+- Slightly shrinks on scroll
+- Subtle backdrop blur
+- Subtle border
+- Smooth transition
+
+Mobile:
+
+Bunny logo + BUNNY
+
+Hamburger menu
+
+Create a premium full-screen animated mobile menu.
+
+============================================================
+8. HERO SECTION
+============================================================
+
+Create a spectacular hero section.
+
+Main headline:
+
+FULL-STACK
+DEVELOPER
+& DIGITAL BUILDER.
+
+Supporting text:
+
+I build modern websites and digital experiences that help businesses look better, work smarter, and grow online.
+
+CTA buttons:
+
+VIEW MY WORK
+
+LET'S WORK TOGETHER
+
+Also show:
+
+AI-ASSISTED DEVELOPMENT
+FULL-STACK ENGINEERING
+FREELANCE WEB DEVELOPMENT
+
+Add a subtle scroll indicator.
+
+Hero should immediately communicate:
+
+Who I am
+What I do
+Why someone should hire me
+
+============================================================
+9. HERO 3D VISUAL
+============================================================
+
+Create a premium 3D visual based around my Bunny identity.
+
+Possible concept:
+
+A floating 3D Bunny logo inside a glass orb.
+
+OR:
+
+A futuristic floating Bunny symbol surrounded by subtle particles.
+
+OR:
+
+An abstract digital structure inspired by the Bunny logo.
+
+The 3D object should subtly react to:
+
+- Mouse movement
+- Cursor position
+- Scroll
+
+Use React Three Fiber / Three.js where appropriate.
+
+IMPORTANT:
+
+Lazy-load the 3D scene.
+
+Do not allow the 3D experience to make the site slow.
+
+On mobile, use a lightweight alternative if necessary.
+
+============================================================
+10. ABOUT SECTION
+============================================================
+
+Headline:
+
+I DON'T JUST BUILD WEBSITES.
+I BUILD DIGITAL EXPERIENCES.
+
+Default content:
+
+I'm Bunny, a full-stack web developer and freelancer focused on creating modern websites and digital experiences for businesses.
+
+I combine coding, design thinking, AI-assisted development, and modern web technologies to turn ideas into functional digital products.
+
+The About content must be editable through the Admin Dashboard.
+
+============================================================
+11. DEVELOPMENT PROCESS
+============================================================
+
+Create a premium section:
+
+FROM IDEA → LAUNCH
+
+Steps:
+
+01
+DISCOVER
+
+Understand the business, audience, goals, and requirements.
+
+02
+DESIGN
+
+Create the visual direction and user experience.
+
+03
+BUILD
+
+Develop the website using modern technologies and AI-assisted workflows.
+
+04
+REFINE
+
+Test, debug, optimize, and polish.
+
+05
+DEPLOY
+
+Launch the final product.
+
+Use a beautiful animated timeline or interactive scroll experience.
+
+============================================================
+12. SKILLS
+============================================================
+
+Do NOT use boring progress bars.
+
+Create interactive skill cards or floating technology clusters.
+
+Initial skills:
+
+FRONTEND
+
+HTML5
+CSS3
+JavaScript
+TypeScript
+React
+Next.js
+Responsive Design
+Modern UI/UX
+
+BACKEND
+
+Node.js
+Express
+REST APIs
+Authentication
+
+DATABASE
+
+Supabase
+PostgreSQL
+SQL
+Firebase
+
+TOOLS
+
+Git
+GitHub
+Netlify
+Vercel
+VS Code
+Figma
+
+AI DEVELOPMENT
+
+AI-assisted coding
+Prompt engineering
+AI prototyping
+AI UI generation
+AI debugging
+AI workflow automation
+
+IMPORTANT:
+
+Do not claim technologies I have not provided as expert-level skills.
+
+Use:
+
+"Tools & Technologies I Work With"
+
+instead of pretending I am an expert in everything.
+
+ALL skills must be editable from the Admin Dashboard.
+
+Admin must be able to:
+
+- Add
+- Edit
+- Delete
+- Hide/show
+- Reorder
+- Change category
+- Change icon
+
+============================================================
+13. SERVICES
+============================================================
+
+Create:
+
+WHAT I CAN BUILD FOR YOU
+
+Service cards:
+
+01
+BUSINESS WEBSITES
+
+Modern websites designed to establish trust and grow businesses.
+
+02
+E-COMMERCE
+
+Modern online stores and product experiences.
+
+03
+FULL-STACK WEB APPLICATIONS
+
+Frontend, backend, database, authentication and APIs.
+
+04
+ADMIN DASHBOARDS
+
+Custom dashboards and management systems.
+
+05
+LANDING PAGES
+
+Modern conversion-focused landing pages.
+
+06
+AI-ASSISTED DIGITAL PRODUCTS
+
+Rapidly developed and customized digital products using modern AI-assisted workflows.
+
+Services must be editable through Admin Dashboard.
+
+Admin can:
+
+- Add
+- Edit
+- Delete
+- Reorder
+- Publish/unpublish
+
+============================================================
+14. SELECTED PROJECTS
+============================================================
+
+Section title:
+
+SELECTED WORK
+
+Subtitle:
+
+A few things I've built for real-world use cases.
+
+I have four projects.
+
+PROJECT 01:
+
+FOAMX
+
+Category:
+
+Automotive Care / Product Website
+
+URL:
+
+https://foamx.netlify.app
+
+PROJECT 02:
+
+SAI SIDDHARTHA SUPER SPECIALITY HOSPITAL
+
+Category:
+
+Healthcare / Hospital Website
+
+URL:
+
+https://sai-siddhartha-super-speciality.netlify.app/
+
+PROJECT 03:
+
+SIYARA DESIGNER STUDIO
+
+Category:
+
+Fashion / E-Commerce
+
+URL:
+
+https://siyara-designer-studio.netlify.app/
+
+PROJECT 04:
+
+VENKEY'S STORE
+
+Category:
+
+E-Commerce / Product Store
+
+URL:
+
+https://venkeys-store.netlify.app/
+
+============================================================
+15. LIVE PROJECT PREVIEWS
+============================================================
+
+This is extremely important.
+
+Do NOT only display screenshots.
+
+I want visitors to see the ACTUAL LIVE PROJECT WEBSITE directly inside my portfolio.
+
+Create a premium browser/device frame.
+
+Inside the frame:
+
+Load the actual project URL using iframe when possible.
+
+Example:
+
+┌────────────────────────────────────────────┐
+│ ● ● ●     project-url                     │
+├────────────────────────────────────────────┤
+│                                            │
+│          LIVE WEBSITE PREVIEW              │
+│                                            │
+└────────────────────────────────────────────┘
+
+Buttons:
+
+OPEN LIVE SITE
+
+VIEW PROJECT
+
+When OPEN LIVE SITE is clicked:
+
+Open the actual website in a new tab.
+
+IMPORTANT:
+
+Some websites may prevent iframe embedding using:
+
+X-Frame-Options
+CSP
+
+If iframe embedding fails:
+
+DO NOT show a broken iframe.
+
+Instead display a beautiful fallback:
+
+LIVE PREVIEW
+
+This website doesn't allow embedded preview.
+
+OPEN LIVE WEBSITE →
+
+The fallback should look intentional and premium.
+
+============================================================
+16. PROJECT SCROLL EXPERIENCE
+============================================================
+
+Create a premium pinned horizontal scrolling experience.
+
+When the visitor scrolls into the Selected Work section:
+
+The section becomes sticky.
+
+Projects move horizontally.
+
+Project 01
+→
+Project 02
+→
+Project 03
+→
+Project 04
+
+Each project should include:
+
+Project number
+Title
+Category
+Description
+Technology tags
+Live website preview
+OPEN LIVE SITE button
+
+Use GSAP ScrollTrigger or equivalent.
+
+Use subtle:
+
+- Scale
+- Blur
+- Rotation
+- Parallax
+- Reveal
+
+Do not over-animate.
+
+============================================================
+17. PROJECT ADMIN MANAGEMENT
+============================================================
+
+Projects must be stored in Supabase.
+
+Admin dashboard must allow:
+
+ADD PROJECT
+EDIT PROJECT
+DELETE PROJECT
+DUPLICATE PROJECT
+PUBLISH / UNPUBLISH
+REORDER PROJECTS
+
+Each project must support:
+
+Title
+Slug
+Category
+Description
+Live URL
+Case Study URL
+Thumbnail
+Preview image
+Technologies
+Featured status
+Published status
+Display order
+
+I should be able to add a new project without changing code.
+
+============================================================
+18. WHY WORK WITH ME
+============================================================
+
+Create:
+
+WHY BUNNY?
+
+Cards:
+
+MODERN DESIGN
+
+Clean, modern interfaces that help businesses look professional.
+
+FAST DEVELOPMENT
+
+AI-assisted workflows allow rapid prototyping and development.
+
+BUSINESS FOCUSED
+
+The goal is not just a beautiful website — it should serve a real business purpose.
+
+CUSTOM BUILDS
+
+Projects are tailored to the client's actual needs.
+
+Do not invent fake statistics or testimonials.
+
+============================================================
+19. AI + HUMAN DEVELOPMENT
+============================================================
+
+Create a distinctive section.
+
+Headline:
+
+AI IS MY TOOL.
+CREATIVITY IS MINE.
+
+Explain:
+
+I use AI to accelerate:
+
+- Ideation
+- Prototyping
+- Coding
+- Debugging
+- Content generation
+- Experimentation
+- Workflow automation
+
+But I remain responsible for:
+
+- Architecture
+- Design direction
+- Technical decisions
+- Customization
+- Testing
+- Deployment
+- Final quality
+
+Create a beautiful visual interaction.
+
+For example:
+
+AI particles flow into structured UI components.
+
+Use the Bunny logo subtly as the center of the animation.
+
+============================================================
+20. FREELANCE CTA
+============================================================
+
+Create a dramatic CTA.
+
+Headline:
+
+HAVE AN IDEA?
+LET'S BUILD IT.
+
+Text:
+
+Whether you need a business website, e-commerce store, landing page, dashboard, or custom web application, let's turn your idea into something people remember.
+
+Buttons:
+
+START A PROJECT
+
+VIEW MY WORK
+
+============================================================
+21. CONTACT
+============================================================
+
+Create a premium contact section.
+
+Fields:
+
+Name
+Email
+Project Type
+Message
+
+Submit button:
+
+SEND MESSAGE
+
+Store all submissions in Supabase.
+
+After successful submission:
+
+MESSAGE SENT SUCCESSFULLY.
+
+Do not invent my email.
+
+Use placeholder:
+
+YOUR_EMAIL_HERE
+
+Social links:
+
+GitHub
+LinkedIn
+Instagram
+Email
+
+All social links must be editable from Admin Dashboard.
+
+============================================================
+22. FOOTER
+============================================================
+
+Minimal premium footer.
+
+Bunny circular logo.
+
+B U N N Y
+
+BUILD • CREATE • INSPIRE
+
+Navigation links.
+
+Social links.
+
+Copyright:
+
+© 2026 BUNNY. ALL RIGHTS RESERVED.
+
+Add subtle Bunny hover interaction.
+
+============================================================
+23. ADMIN DASHBOARD
+============================================================
+
+This is REQUIRED.
+
+Create:
+
+/admin
+
+The Admin Dashboard must be a complete CMS.
+
+It should NOT look like the public portfolio.
+
+It should look like a professional modern SaaS dashboard.
+
+============================================================
+24. ADMIN LOGIN
+============================================================
+
+Create:
+
+/admin/login
+
+Use Supabase Authentication.
+
+Login:
+
+Email
+Password
+
+After successful login:
+
+Redirect to:
+
+/admin
+
+Protect all admin routes.
+
+Unauthenticated users must NOT access:
+
+/admin
+/admin/projects
+/admin/skills
+/admin/services
+/admin/messages
+/admin/settings
+
+Do NOT hardcode passwords.
+
+Do NOT store passwords in frontend code.
+
+============================================================
+25. ADMIN DASHBOARD HOME
+============================================================
+
+Dashboard overview should display:
+
+Total Projects
+Published Projects
+Total Skills
+Total Services
+Unread Messages
+
+Also show:
+
+Recent Projects
+
+Recent Messages
+
+Quick actions:
+
++ ADD PROJECT
++ ADD SKILL
++ ADD SERVICE
+VIEW MESSAGES
+EDIT HOMEPAGE
+
+============================================================
+26. ADMIN SIDEBAR
+============================================================
+
+Sidebar:
+
+DASHBOARD
+
+CONTENT
+
+Homepage
+About
+Skills
+Services
+Projects
+
+COMMUNICATION
+
+Messages
+
+SETTINGS
+
+Social Links
+Site Settings
+
+Logout
+
+============================================================
+27. HOMEPAGE CMS
+============================================================
+
+Admin should be able to edit:
+
+Hero heading
+Hero subtitle
+Hero description
+Hero CTA text
+Hero CTA link
+About heading
+About description
+Section headings
+Freelance CTA
+Footer text
+
+Also:
+
+Show/hide sections.
+
+Changes must be saved to Supabase.
+
+The public website should automatically display the updated content.
+
+No redeployment should be necessary.
+
+============================================================
+28. ABOUT CMS
+============================================================
+
+Editable:
+
+About heading
+Short bio
+Long bio
+Profile image
+
+Upload profile image to Supabase Storage.
+
+============================================================
+29. SERVICES CMS
+============================================================
+
+CRUD:
+
+Create
+Read
+Update
+Delete
+
+Fields:
+
+Title
+Description
+Icon
+Order
+Published
+
+============================================================
+30. SKILLS CMS
+============================================================
+
+CRUD:
+
+Title
+Category
+Icon
+Description
+Order
+Published
+
+============================================================
+31. PROJECT CMS
+============================================================
+
+CRUD:
+
+Title
+Slug
+Category
+Description
+Live URL
+Case Study URL
+Thumbnail
+Preview image
+Technologies
+Featured
+Published
+Order
+
+Allow drag-and-drop project ordering if practical.
+
+============================================================
+32. MESSAGES CMS
+============================================================
+
+Display contact form submissions.
+
+Fields:
+
+Name
+Email
+Project Type
+Message
+Date
+Status
+
+Statuses:
+
+Unread
+Read
+Replied
+
+Admin can:
+
+- Open message
+- Mark as read
+- Mark unread
+- Mark replied
+- Delete
+
+Add search and filtering.
+
+============================================================
+33. SOCIAL LINKS CMS
+============================================================
+
+Editable:
+
+GitHub
+LinkedIn
+Instagram
+Email
+Other links
+
+============================================================
+34. SITE SETTINGS CMS
+============================================================
+
+Editable:
+
+Website name
+Tagline
+Meta title
+Meta description
+Contact email
+Footer text
+Availability status
+Accent color
+
+Also:
+
+Enable/disable Bunny intro animation.
+
+============================================================
+35. SUPABASE DATABASE
+============================================================
+
+Use PostgreSQL through Supabase.
+
+Create appropriate tables.
+
+Suggested schema:
+
+profiles
+
+site_settings
+
+hero_content
+
+about_content
+
+skills
+
+services
+
+projects
+
+project_technologies
+
+social_links
+
+contact_messages
+
+Each appropriate table should include:
+
+id
+created_at
+updated_at
+
+Use UUID primary keys where appropriate.
+
+============================================================
+36. SUPABASE AUTHORIZATION
+============================================================
+
+Use Supabase Auth.
+
+Create an admin role.
+
+Example:
+
+profiles
+
+id
+email
+role
+
+role:
+
+admin
+
+Use Row Level Security.
+
+IMPORTANT:
+
+Do NOT rely on:
+
+localStorage
+cookies created manually
+frontend flags
+"isAdmin = true"
+
+Security must be enforced at the Supabase database level.
+
+============================================================
+37. ROW LEVEL SECURITY
+============================================================
+
+Implement proper RLS.
+
+Public visitors:
+
+Can read published:
+
+Projects
+Skills
+Services
+Public content
+Social links
+
+Public visitors:
+
+Can submit contact forms.
+
+Public visitors MUST NOT:
+
+Read private messages.
+
+Modify projects.
+
+Modify skills.
+
+Modify services.
+
+Modify settings.
+
+Modify homepage content.
+
+Admin:
+
+Can create/update/delete CMS content.
+
+Admin can read messages.
+
+Admin can manage everything.
+
+Provide complete SQL policies.
+
+============================================================
+38. SUPABASE STORAGE
+============================================================
+
+Use Supabase Storage for:
+
+Project thumbnails
+Project images
+Profile image
+Logo assets if appropriate
+
+Admin should be able to:
+
+Upload
+Preview
+Replace
+Delete
+
+images.
+
+============================================================
+39. CONTENT MUST COME FROM SUPABASE
+============================================================
+
+Do NOT hardcode CMS content in the public website.
+
+These must load from Supabase:
+
+Hero
+About
+Skills
+Services
+Projects
+Social links
+Site settings
+Contact information
+
+This allows me to edit the portfolio without redeploying.
+
+============================================================
+40. LOADING / ERROR STATES
+============================================================
+
+Create beautiful:
+
+Skeleton loaders
+Loading states
+Empty states
+Error states
+
+Do not show raw Supabase errors.
+
+Example:
+
+Unable to load projects.
+
+TRY AGAIN
+
+============================================================
+41. PERFORMANCE
+============================================================
+
+The website must remain fast.
+
+Implement:
+
+Lazy loading
+Code splitting
+Image optimization
+Lazy-loaded 3D
+Efficient animations
+GPU-friendly transforms
+Optimized fonts
+Minimal dependencies
+Avoid unnecessary rerenders
+
+Do not sacrifice performance for visual effects.
+
+============================================================
+42. RESPONSIVENESS
+============================================================
+
+Perfectly support:
+
+Desktop
+Laptop
+Tablet
+Mobile
+
+Especially:
+
+iPhone
+Android
+
+Do not simply shrink the desktop version.
+
+Create intentional mobile layouts.
+
+Mobile:
+
+- Disable heavy 3D if necessary
+- Disable custom cursor
+- Simplify project preview
+- Optimize animations
+- Touch-friendly buttons
+
+============================================================
+43. CUSTOM CURSOR
+============================================================
+
+Desktop only.
+
+Normal:
+
+Small circular cursor.
+
+Hover button:
+
+Cursor expands.
+
+Hover project:
+
+VIEW
+
+Hover external link:
+
+OPEN
+
+Disable on mobile.
+
+============================================================
+44. SMOOTH SCROLL
+============================================================
+
+Use:
+
+Lenis
+
+or an equivalent smooth-scroll solution.
+
+Integrate it correctly with GSAP if GSAP is used.
+
+Do not create scroll-jank.
+
+============================================================
+45. ACCESSIBILITY
+============================================================
+
+Implement:
+
+Semantic HTML
+Keyboard navigation
+Accessible buttons
+Form labels
+Alt text
+Focus states
+Color contrast
+Reduced motion
+
+Respect:
+
+prefers-reduced-motion
+
+============================================================
+46. SEO
+============================================================
+
+Title:
+
+Bunny — Full-Stack Web Developer & Freelancer
+
+Meta description:
+
+Bunny is a full-stack web developer and freelancer helping businesses build modern websites, e-commerce stores, web applications and digital experiences.
+
+Implement:
+
+Open Graph
+Twitter metadata
+Canonical URL
+Semantic headings
+Favicon
+Robots metadata
+
+============================================================
+47. NETLIFY DEPLOYMENT
+============================================================
+
+The website must deploy correctly to Netlify.
+
+Include:
+
+netlify.toml if needed.
+
+Configure SPA redirects if using React Router.
+
+Routes:
+
+/
+/about
+/work
+/contact
+/admin
+/admin/login
+/admin/projects
+/admin/skills
+/admin/services
+/admin/messages
+/admin/settings
+
+Refreshing any route must work.
+
+============================================================
+48. ENVIRONMENT VARIABLES
+============================================================
+
+Use environment variables.
+
+For Vite:
+
+VITE_SUPABASE_URL=
+
+VITE_SUPABASE_ANON_KEY=
+
+Create:
+
+.env.example
+
+Never expose:
+
+Supabase service-role key
+Private API keys
+Admin passwords
+Secrets
+
+Never commit .env to GitHub.
+
+============================================================
+49. PROJECT STRUCTURE
+============================================================
+
+Use a clean scalable architecture.
+
+Example:
+
+src/
+  components/
+  sections/
+  pages/
+  layouts/
+  hooks/
+  lib/
+  services/
+  animations/
+  types/
+  utils/
+
+admin/
+  components/
+  pages/
+  hooks/
+  services/
+
+supabase/
+  migrations/
+  seed/
+
+Do not put the entire application inside one giant component.
+
+============================================================
+50. SUPABASE SQL
+============================================================
+
+Provide complete SQL for:
+
+Tables
+Indexes
+Foreign keys
+RLS
+Policies
+Admin role
+Storage policies
+Seed data
+
+I should be able to paste the SQL into Supabase SQL Editor.
+
+============================================================
+51. INITIAL PROJECT DATA
+============================================================
+
+Seed the database with:
+
+PROJECT 1:
+
+FoamX
+
+Category:
+
+Automotive Care / Product Website
+
+URL:
+
+https://foamx.netlify.app
+
+PROJECT 2:
+
+Sai Siddhartha Super Speciality Hospital
+
+Category:
+
+Healthcare / Hospital Website
+
+URL:
+
+https://sai-siddhartha-super-speciality.netlify.app/
+
+PROJECT 3:
+
+Siyara Designer Studio
+
+Category:
+
+Fashion / E-Commerce
+
+URL:
+
+https://siyara-designer-studio.netlify.app/
+
+PROJECT 4:
+
+Venkey's Store
+
+Category:
+
+E-Commerce / Product Store
+
+URL:
+
+https://venkeys-store.netlify.app/
+
+============================================================
+52. DO NOT INVENT INFORMATION
+============================================================
+
+Do NOT fabricate:
+
+Client names
+Testimonials
+Reviews
+Awards
+Revenue
+Number of clients
+Years of experience
+Project statistics
+
+If information is not provided:
+
+Use editable placeholders.
+
+============================================================
+53. ADMIN PREVIEW / PUBLISH
+============================================================
+
+Where practical, support:
+
+SAVE
+
+SAVE & PUBLISH
+
+PREVIEW
+
+Admin should have clear feedback:
+
+Saved successfully.
+
+Published successfully.
+
+Failed to save.
+
+============================================================
+54. SECURITY
+============================================================
+
+This is a production website.
+
+Do not expose:
+
+Supabase service role key
+Private credentials
+Passwords
+Private user data
+
+Use:
+
+Supabase Auth
+RLS
+Secure queries
+Input validation
+Form validation
+
+Sanitize user-generated content where appropriate.
+
+============================================================
+55. FINAL PUBLIC WEBSITE EXPERIENCE
+============================================================
+
+The visitor journey should feel like:
+
+OPEN WEBSITE
+
+↓
+
+REAL RABBIT RUNS RIGHT → LEFT
+
+↓
+
+RABBIT TRANSFORMS INTO BUNNY LOGO
+
+↓
+
+B U N N Y
+
+↓
+
+BUILD • CREATE • INSPIRE
+
+↓
+
+PREMIUM HERO
+
+↓
+
+INTERACTIVE 3D BUNNY
+
+↓
+
+ABOUT
+
+↓
+
+DEVELOPMENT PROCESS
+
+↓
+
+SKILLS
+
+↓
+
+SERVICES
+
+↓
+
+SELECTED WORK
+
+↓
+
+LIVE PROJECT PREVIEWS
+
+↓
+
+AI + HUMAN DEVELOPMENT
+
+↓
+
+WHY BUNNY
+
+↓
+
+FREELANCE CTA
+
+↓
+
+CONTACT
+
+↓
+
+FOOTER
+
+Every section should feel connected.
+
+Use consistent motion language.
+
+Use the Bunny logo as a recurring visual motif without overusing it.
+
+============================================================
+56. FINAL ADMIN EXPERIENCE
+============================================================
+
+I should be able to:
+
+Go to:
+
+/admin/login
+
+↓
+
+Login with Supabase Auth
+
+↓
+
+Open dashboard
+
+↓
+
+Edit homepage
+
+↓
+
+Edit About
+
+↓
+
+Manage Skills
+
+↓
+
+Manage Services
+
+↓
+
+Manage Projects
+
+↓
+
+View Contact Messages
+
+↓
+
+Manage Social Links
+
+↓
+
+Manage Site Settings
+
+↓
+
+Publish changes
+
+Changes must appear on the public website without requiring a new deployment.
+
+============================================================
+57. QUALITY BAR
+============================================================
+
+The public website should feel like it was created by:
+
+A premium digital agency + senior creative developer.
+
+It must NOT feel like:
+
+- A generic developer template
+- A beginner portfolio
+- A basic resume
+- A WordPress portfolio
+- A dashboard
+- A collection of random cards
+- A generic AI-generated website
+
+The website must communicate:
+
+CREATIVE
+
+TECHNICAL
+
+PROFESSIONAL
+
+MODERN
+
+FAST
+
+BUSINESS-FOCUSED
+
+The Bunny rabbit should become the recognizable personality of the brand.
+
+============================================================
+58. FINAL DELIVERABLES
+============================================================
+
+Build the actual complete working application.
+
+Provide:
+
+1. Complete frontend
+2. Complete admin dashboard
+3. Supabase integration
+4. Supabase database schema
+5. RLS policies
+6. Supabase Auth
+7. Supabase Storage
+8. CRUD operations
+9. Contact form
+10. Contact message management
+11. Project live previews
+12. Bunny logo animation
+13. 3D hero
+14. Smooth scrolling
+15. Premium animations
+16. Responsive design
+17. Mobile design
+18. SEO
+19. Netlify configuration
+20. Environment variable example
+21. Seed data
+22. README
+23. Setup instructions
+24. Deployment instructions
+
+============================================================
+59. IMPORTANT DEVELOPMENT INSTRUCTION
+============================================================
+
+Before writing the code:
+
+FIRST:
+
+Analyze the requirements.
+
+SECOND:
+
+Design the complete UX architecture.
+
+THIRD:
+
+Design the database schema.
+
+FOURTH:
+
+Design Supabase authentication and RLS.
+
+FIFTH:
+
+Design the public website component architecture.
+
+SIXTH:
+
+Design the admin dashboard architecture.
+
+SEVENTH:
+
+Design the animation system.
+
+EIGHTH:
+
+Build the application.
+
+Do NOT give me only a mockup.
+
+Do NOT give me pseudo-code.
+
+Do NOT create fake functionality.
+
+Build real working CRUD.
+
+Build real Supabase integration.
+
+Build real authentication.
+
+Build real admin protection.
+
+Build real contact submission.
+
+Build real project management.
+
+Build real live project previews.
+
+============================================================
+60. FINAL TESTING CHECKLIST
+============================================================
+
+Before considering the project complete, verify:
+
+PUBLIC WEBSITE:
+
+✓ Navbar works
+✓ Bunny animation works
+✓ Logo displays correctly
+✓ Hero works
+✓ 3D works
+✓ Smooth scrolling works
+✓ Skills load
+✓ Services load
+✓ Projects load
+✓ Project animations work
+✓ Live previews work
+✓ External project links work
+✓ Contact form works
+✓ Footer works
+✓ Mobile works
+✓ Tablet works
+✓ Desktop works
+
+ADMIN:
+
+✓ Admin login works
+✓ Unauthorized users are blocked
+✓ Dashboard works
+✓ Homepage editing works
+✓ About editing works
+✓ Skills CRUD works
+✓ Services CRUD works
+✓ Projects CRUD works
+✓ Project ordering works
+✓ Messages work
+✓ Message status works
+✓ Social links editing works
+✓ Site settings work
+✓ Image upload works
+✓ Publish/unpublish works
+✓ Logout works
+
+SUPABASE:
+
+✓ Database schema works
+✓ RLS works
+✓ Admin authorization works
+✓ Public read policies work
+✓ Contact insert works
+✓ Private messages are protected
+✓ Storage policies work
+
+DEPLOYMENT:
+
+✓ Netlify build works
+✓ Environment variables work
+✓ SPA routing works
+✓ Refreshing /admin works
+✓ Refreshing /admin/login works
+✓ No secret keys exposed
+✓ No console-breaking errors
+
+============================================================
+FINAL GOAL
+============================================================
+
+The final website should create this feeling:
+
+"Wow. Bunny isn't just showing a portfolio.
+Bunny built an entire digital experience."
+
+The signature identity should be:
+
+🐇 REAL RABBIT
+→
+GEOMETRIC BUNNY
+→
+B U N N Y
+→
+BUILD • CREATE • INSPIRE
+
+Then the visitor discovers that Bunny is a:
+
+FULL-STACK WEB DEVELOPER
++
+FREELANCER
++
+AI-ASSISTED DIGITAL BUILDER
+
+The result should be one of the most visually impressive personal developer portfolios possible while still being fast, usable, accessible, maintainable and production-ready.
