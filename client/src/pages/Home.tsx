@@ -1,33 +1,64 @@
-import { useAuth } from "@/_core/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import { FormEvent, useEffect, useMemo, useState } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
+import { ArrowUpRight, Code2, Database, Layers3, Menu, MessageCircle, MoveRight, Palette, Send, Sparkles, X, Zap } from "lucide-react";
+import { toast } from "sonner";
+import BunnySignature from "@/components/BunnySignature";
+import { trpc } from "@/lib/trpc";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Workflow, Frontend Best Practices, Design Guide and Common Pitfalls
- */
+const projects = [
+  { title: "Northstar Commerce", type: "E-COMMERCE", tags: ["React", "Supabase", "Payments"], tone: "orange", image: "/manus-storage/northstar-commerce_4e1e15c0.jpg", description: "A conversion-focused storefront with a calmer, faster buying journey.", live: "https://example.com", github: "https://github.com/" },
+  { title: "Signal Operations", type: "DASHBOARD", tags: ["TypeScript", "Data viz", "UX"], tone: "violet", image: "/manus-storage/signal-operations_8d0c38fa.jpg", description: "An operational command center that makes complex signals readable.", live: "https://example.com", github: "https://github.com/" },
+  { title: "Morrow Studio", type: "BRAND SYSTEM", tags: ["Web design", "Motion", "CMS"], tone: "green", image: "/manus-storage/morrow-studio_f3a4f7ac.jpg", description: "A digital home for a modern studio built around rhythm and restraint.", live: "https://example.com", github: "https://github.com/" },
+];
+const filters = ["ALL", "E-COMMERCE", "DASHBOARD", "BRAND SYSTEM"];
+const services = [
+  { icon: <Code2 />, title: "FULL-STACK BUILDS", copy: "From first route to production-ready backend, I build the parts that make a product work." },
+  { icon: <Palette />, title: "DIGITAL DIRECTION", copy: "A sharp visual system, clear interaction language, and a product people remember." },
+  { icon: <Zap />, title: "AI-ASSISTED VELOCITY", copy: "AI accelerates exploration. Architecture, judgment, testing, and craft stay human-led." },
+  { icon: <Layers3 />, title: "PRODUCT REFINEMENT", copy: "Debugging, performance, accessibility, and polish that turn a good idea into a dependable one." },
+];
+const reveal = { hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0, transition: { duration: .65, ease: [0.23, 1, 0.32, 1] as const } } };
+const stagger = { hidden: {}, visible: { transition: { staggerChildren: .09 } } };
+
+function SectionLabel({ number, children }: { number: string; children: string }) { return <div className="section-label"><span>{number}</span><span>{children}</span></div>; }
+function ScrollSection({ id, children, className = "" }: { id: string; children: React.ReactNode; className?: string }) { return <section id={id} className={className}>{children}</section>; }
+
 export default function Home() {
-  // The useAuth hook provides authentication state.
-  // To implement login/logout, call logout(), or start login from an event
-  // handler: onClick={() => startLogin()} (imported from "@/const"). Never call
-  // startLogin() during render (no href={startLogin()}) — it mints a one-time
-  // nonce cookie and must run only at the moment of navigation.
-  let { user, loading, error, isAuthenticated, logout } = useAuth();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState("home");
+  const [filter, setFilter] = useState("ALL");
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
+  const submit = trpc.contact.submit.useMutation({ onSuccess: () => { toast.success("Message received. I’ll be in touch soon."); setForm({ name: "", email: "", message: "" }); }, onError: () => toast.error("Something went wrong. Please try again.") });
+  const visibleProjects = useMemo(() => filter === "ALL" ? projects : projects.filter(p => p.type === filter), [filter]);
 
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) setActive(entry.target.id); }), { rootMargin: "-30% 0px -55%" });
+    ["home", "about", "process", "skills", "work", "services", "contact"].forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
+    return () => observer.disconnect();
+  }, []);
+  const navTo = (id: string) => { document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); setMenuOpen(false); };
+  const onSubmit = (e: FormEvent) => { e.preventDefault(); if (!form.name || !form.email || !form.message) { toast.error("Please complete all fields."); return; } submit.mutate(form); };
 
-  return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
-    </div>
-  );
+  return <div className="site-shell">
+    <motion.div className="scroll-progress" style={{ scaleX: progress }} />
+    <header className="site-nav"><div className="nav-inner"><button className="brand-lockup" onClick={() => navTo("home")} aria-label="Go home"><span className="nav-signature"><BunnySignature /></span></button><nav className="desktop-links">{["about", "skills", "work", "services", "contact"].map((id, i) => <button className={active === id ? "active" : ""} key={id} onClick={() => navTo(id)}><span>0{i + 1}</span>{id.toUpperCase()}</button>)}</nav><button className="menu-toggle" onClick={() => setMenuOpen(v => !v)} aria-label="Toggle navigation">{menuOpen ? <X /> : <Menu />}</button></div>{menuOpen && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mobile-menu">{["home", "about", "skills", "work", "services", "contact"].map((id, i) => <button key={id} onClick={() => navTo(id)}><span>0{i + 1}</span>{id.toUpperCase()}<ArrowUpRight /></button>)}</motion.div>}</header>
+
+    <ScrollSection id="home" className="hero"><div className="hero-grid" /><div className="hero-copy"><motion.div initial="hidden" animate="visible" variants={reveal} className="eyebrow"><span className="status-dot" /> AVAILABLE FOR SELECT PROJECTS <span className="eyebrow-line" /></motion.div><motion.h1 initial="hidden" animate="visible" transition={{ delay: .1 }} variants={reveal}>FULL-STACK<br /><em>DEVELOPER</em><br /><span>& DIGITAL BUILDER.</span></motion.h1><motion.p initial="hidden" animate="visible" transition={{ delay: .2 }} variants={reveal}>I build modern websites and digital experiences that help businesses look better, work smarter, and grow online.</motion.p><motion.div initial="hidden" animate="visible" transition={{ delay: .3 }} variants={reveal} className="hero-actions"><button className="button button-primary" onClick={() => navTo("work")}>VIEW MY WORK <ArrowUpRight /></button><button className="button button-ghost" onClick={() => navTo("contact")}>LET'S WORK TOGETHER <MoveRight /></button></motion.div><motion.div initial="hidden" animate="visible" transition={{ delay: .4 }} variants={reveal} className="hero-micro"><span>AI-ASSISTED DEVELOPMENT</span><span>FULL-STACK ENGINEERING</span><span>FREELANCE WEB DEVELOPMENT</span></motion.div></div><div className="hero-art"><div className="orb orb-one" /><div className="orb orb-two" /><div className="logo-halo"><img src="/manus-storage/bunny-logo_ddf1c33c.png" alt="Bunny geometric rabbit logo" /></div><div className="orbit orbit-a" /><div className="orbit orbit-b" /><div className="art-caption"><span>01 / 04</span><span>CRAFTED IN THE OPEN</span></div></div><div className="hero-bottom"><span>SCROLL TO EXPLORE</span><span className="scroll-line" /><span>© 2026</span></div></ScrollSection>
+
+    <ScrollSection id="about" className="section about-section"><div className="container"><SectionLabel number="01" children="A LITTLE ABOUT ME" /><div className="about-layout"><motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true, amount: .3 }} variants={reveal}>I DON'T JUST BUILD<br /><span>WEBSITES.</span><br />I BUILD DIGITAL<br /><span>EXPERIENCES.</span></motion.h2><motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={reveal} className="about-copy"><p className="lead">I'm Bunny, a full-stack web developer and freelancer focused on creating modern websites and digital experiences for businesses.</p><p>I combine coding, design thinking, AI-assisted development, and modern web technologies to turn ideas into functional digital products. AI is the accelerator; the architecture, decisions, customization, testing, and final craft are mine.</p><div className="signature">BUNNY <span>— DIGITAL BUILDER</span></div></motion.div></div></div></ScrollSection>
+
+    <ScrollSection id="process" className="section process-section"><div className="container"><SectionLabel number="02" children="FROM IDEA → LAUNCH" /><motion.div className="process-grid" initial="hidden" whileInView="visible" viewport={{ once: true, amount: .2 }} variants={stagger}>{[["01", "DISCOVER", "Understand the business, audience, goals, and requirements."], ["02", "DESIGN", "Create the visual direction and user experience."], ["03", "BUILD", "Develop with modern technologies and AI-assisted workflows."], ["04", "REFINE", "Test, debug, optimize, and polish."], ["05", "DEPLOY", "Launch the final product with confidence."]].map(([n, t, c]) => <motion.div variants={reveal} className="process-card" key={n}><span>{n}</span><h3>{t}</h3><p>{c}</p><MoveRight /></motion.div>)}</motion.div></div></ScrollSection>
+
+    <ScrollSection id="skills" className="section skills-section"><div className="container"><SectionLabel number="03" children="THE TOOLKIT" /><div className="skills-head"><h2>BUILT FOR THE<br /><span>WHOLE PICTURE.</span></h2><p>The stack is a means to an end: focused, adaptable, and chosen around the product.</p></div><div className="skill-groups"><div className="skill-group"><Code2 /><h3>FRONTEND</h3><div>{["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Responsive UI", "Motion"].map(s => <span key={s}>{s}</span>)}</div></div><div className="skill-group"><Database /><h3>BACKEND + DATA</h3><div>{["Node.js", "Express", "REST APIs", "Auth", "Supabase", "PostgreSQL", "SQL", "Firebase"].map(s => <span key={s}>{s}</span>)}</div></div></div></div></ScrollSection>
+
+    <ScrollSection id="work" className="section work-section"><div className="container"><SectionLabel number="04" children="SELECTED WORK" /><div className="work-head"><h2>IDEAS, <span>BUILT.</span></h2><div className="filter-row">{filters.map(f => <button key={f} className={filter === f ? "selected" : ""} onClick={() => setFilter(f)}>{f}</button>)}</div></div><motion.div layout className="project-grid">{visibleProjects.map((p, i) => <motion.article layout initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * .08 }} className={`project-card tone-${p.tone}`} key={p.title}><div className="project-visual"><img className="project-image" src={p.image} alt={`${p.title} project preview`} /><div className="visual-grid" /><div className="visual-label">PROJECT / 0{i + 1}</div><div className="visual-shape" /></div><div className="project-meta"><div><span>{p.type}</span><h3>{p.title}</h3></div><div className="project-links"><a href={p.live} target="_blank" rel="noreferrer" aria-label={`${p.title} live site`}><ArrowUpRight /></a><a href={p.github} target="_blank" rel="noreferrer" aria-label={`${p.title} GitHub`}><Code2 /></a></div></div><p>{p.description}</p><div className="tag-row">{p.tags.map(t => <span key={t}>{t}</span>)}</div></motion.article>)}</motion.div></div></ScrollSection>
+
+    <ScrollSection id="services" className="section services-section"><div className="container"><SectionLabel number="05" children="WHAT I DO" /><div className="services-head"><h2>MAKE IT <span>MATTER.</span></h2><p>Strategy, design, engineering, and the small details in between.</p></div><motion.div className="services-grid" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>{services.map((s, i) => <motion.div variants={reveal} className="service-card" key={s.title}><div className="service-top"><span>0{i + 1}</span>{s.icon}</div><h3>{s.title}</h3><p>{s.copy}</p><ArrowUpRight className="service-arrow" /></motion.div>)}</motion.div></div></ScrollSection>
+
+    <ScrollSection id="contact" className="section contact-section"><div className="container"><SectionLabel number="06" children="START A CONVERSATION" /><div className="contact-layout"><div><h2>HAVE A GOOD<br /><span>IDEA?</span><br />LET'S TALK.</h2><p>Tell me what you’re building, where it’s stuck, or where you want it to go.</p><a href="mailto:hello@bunny.build" className="contact-email">hello@bunny.build <ArrowUpRight /></a></div><form onSubmit={onSubmit} className="contact-form"><label>YOUR NAME<input value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} placeholder="Jane Smith" /></label><label>EMAIL ADDRESS<input type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} placeholder="jane@company.com" /></label><label>HOW CAN I HELP?<textarea value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} placeholder="A few words about your project..." rows={4} /></label><button className="button button-primary" disabled={submit.isPending}>{submit.isPending ? "SENDING..." : "SEND MESSAGE"} <Send /></button></form></div></div></ScrollSection>
+
+    <footer className="site-footer"><div className="footer-brand"><BunnySignature /></div><div className="footer-bottom"><span>© 2026 BUNNY. ALL RIGHTS RESERVED.</span><span>BUILD • CREATE • INSPIRE</span><button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>BACK TO TOP <ArrowUpRight /></button></div></footer>
+  </div>;
 }

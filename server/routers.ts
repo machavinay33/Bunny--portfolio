@@ -1,7 +1,10 @@
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { publicProcedure, router } from "./_core/trpc";
+import { adminProcedure, publicProcedure, router } from "./_core/trpc";
+import { contactInputSchema } from "./contact";
+import { createContactSubmission, listContactSubmissions } from "./db";
+import { notifyOwner } from "./_core/notification";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -15,6 +18,15 @@ export const appRouter = router({
         success: true,
       } as const;
     }),
+  }),
+
+  contact: router({
+    submit: publicProcedure.input(contactInputSchema).mutation(async ({ input }) => {
+      const submission = await createContactSubmission(input);
+      const notified = await notifyOwner({ title: `New portfolio inquiry from ${input.name}`, content: `Email: ${input.email}\n\n${input.message}` });
+      return { success: true, id: submission.id, notified };
+    }),
+    inbox: adminProcedure.query(() => listContactSubmissions()),
   }),
 
   // TODO: add feature routers here, e.g.
