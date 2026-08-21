@@ -16,3 +16,8 @@
 - [x] Add an accessible light/dark mode toggle switch to the navigation bar with persisted preference.
 - [x] Add and verify complementary light-theme tokens and component states.
 - [x] Test the theme toggle with typecheck, Vitest, and visual verification.
+- [x] Replace the dark-first visual system with a realistic light-first color direction and more natural typography.
+- [x] Update the Work section with the four supplied live website links and embedded live previews.
+- [x] Add a final project entry stating that additional websites were created.
+- [x] Verify all supplied live links and the refreshed responsive UI.
+- [x] Package the updated full source code into a new ZIP archive.
